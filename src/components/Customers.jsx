@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Customers = () => {
     const brands = [
         "Nestlé", "ITC Limited", "CONCOR", "Barry Callebaut", "Reckitt Benckiser", "TVS",

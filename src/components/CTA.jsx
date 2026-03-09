@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CTA = () => {
     return (
         <section className="py-24 px-6 sm:px-12 md:px-24 bg-[#111111] text-white">

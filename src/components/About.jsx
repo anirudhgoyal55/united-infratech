@@ -39,7 +39,7 @@ const About = () => {
 
                     <div className="space-y-6 text-[#444444] font-sans text-lg lg:text-xl leading-relaxed">
                         <p className="about-anim">
-                            <strong className="text-text">United Inframech</strong> operates at the vanguard of industrial structural design. We execute massive-scale HVAC, PHE (Public Health Engineering), and mechanical fabrication ecosystems with absolute zero tolerance for failure.
+                            <strong className="text-text">United Infratech</strong> operates at the vanguard of industrial structural design. We execute massive-scale HVAC, PHE (Public Health Engineering), and mechanical fabrication ecosystems with absolute zero tolerance for failure.
                         </p>
                         <p className="about-anim">
                             We don't just build environments; we engineer atmospheres. From high-grade ducting to thermodynamic insulation, our methodology is rooted in harsh realities, forged into sustainable frameworks that outlast the generations they serve.

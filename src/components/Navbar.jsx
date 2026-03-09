@@ -45,7 +45,7 @@ const Navbar = () => {
             >
                 <div className="flex items-center gap-2 font-bold text-lg tracking-tight font-sans text-white">
                     <span className="text-xl">⚙️</span>
-                    <span className="tracking-tighter uppercase">United Inframech</span>
+                    <span className="tracking-tighter uppercase">United Infratech</span>
                 </div>
 
                 <div className="hidden md:flex items-center gap-8 text-sm font-medium font-sans uppercase tracking-widest text-[#E8E4DD]">

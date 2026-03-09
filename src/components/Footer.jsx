@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
     return (
         <footer className="bg-text text-white pt-24 pb-12 px-6 sm:px-12 md:px-24 rounded-t-[4rem] relative -mt-8 z-10 border-t-8 border-accent">
@@ -23,8 +21,8 @@ const Footer = () => {
 
                         <div>
                             <span className="text-accent font-bold font-sans uppercase text-xs mb-2 tracking-widest block">Email</span>
-                            <a href="mailto:amit@unitedinframech.com" className="hover:text-white transition-colors block">amit@unitedinframech.com</a>
-                            <a href="mailto:sales@unitedinframech.com" className="hover:text-white transition-colors block">sales@unitedinframech.com</a>
+                            <a href="mailto:amit@unitedinfratech.com" className="hover:text-white transition-colors block">amit@unitedinfratech.com</a>
+                            <a href="mailto:sales@unitedinfratech.com" className="hover:text-white transition-colors block">sales@unitedinfratech.com</a>
                         </div>
 
                         <div>
@@ -58,7 +56,7 @@ const Footer = () => {
             <div className="max-w-6xl mx-auto pt-8 border-t border-[#333333] flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex items-center gap-2">
                     <span className="text-xl">⚙️</span>
-                    <span className="font-bold text-xl tracking-tighter uppercase font-sans">United Inframech</span>
+                    <span className="font-bold text-xl tracking-tighter uppercase font-sans">United Infratech</span>
                 </div>
 
                 <div className="flex items-center gap-3 bg-[#1a1a1a] px-4 py-2 rounded-full border border-[#333333]">
@@ -67,7 +65,7 @@ const Footer = () => {
                 </div>
 
                 <p className="text-xs text-[#888888] font-sans font-medium uppercase tracking-widest">
-                    &copy; {new Date().getFullYear()} United Inframech.
+                    &copy; {new Date().getFullYear()} United Infratech.
                 </p>
             </div>
         </footer>

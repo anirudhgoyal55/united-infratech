@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Quality = () => {
     return (
         <section id="quality" className="py-32 px-6 sm:px-12 md:px-24 bg-text relative overflow-hidden text-white selection:bg-accent selection:text-white">
