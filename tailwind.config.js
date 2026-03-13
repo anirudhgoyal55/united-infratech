@@ -7,10 +7,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                background: '#F5F3EE', // Off-white
-                primary: '#E8E4DD', // Paper
-                accent: '#E63B2E',  // Signal Red
-                text: '#111111',    // Black
+                background: '#F9FAFB', // Crisp light background
+                primary: '#FFFFFF', // Clean white for cards
+                accent: '#0A4A9B',  // Engineering Corporate Blue
+                text: '#0B1120',    // Deep Navy/Black for stark contrast
             },
             fontFamily: {
                 sans: ['"Space Grotesk"', 'sans-serif'],

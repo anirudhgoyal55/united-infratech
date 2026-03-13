@@ -10,7 +10,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 20) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -24,12 +24,14 @@ const Navbar = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.to(navRef.current, {
-                backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.6)' : 'transparent',
-                backdropFilter: isScrolled ? 'blur(16px)' : 'blur(0px)',
+                backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
+                backdropFilter: isScrolled ? 'blur(20px)' : 'blur(0px)',
                 borderColor: isScrolled ? 'rgba(0, 0, 0, 0.05)' : 'transparent',
-                color: isScrolled ? '#333333' : '#ffffff',
-                duration: 0.3,
-                ease: 'power2.inOut'
+                boxShadow: isScrolled ? '0 10px 40px -10px rgba(0,0,0,0.05)' : 'none',
+                paddingTop: isScrolled ? '0.75rem' : '1.5rem',
+                paddingBottom: isScrolled ? '0.75rem' : '1.5rem',
+                duration: 0.4,
+                ease: 'power3.out'
             });
         }, navRef.current);
 
@@ -37,26 +39,27 @@ const Navbar = () => {
     }, [isScrolled]);
 
     return (
-        <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full mix-blend-normal">
+        <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6 w-full pointer-events-none">
             <nav
                 ref={navRef}
-                className="flex items-center justify-between px-6 py-3 rounded-[3rem] border border-transparent transition-all duration-300 w-full max-w-5xl"
-                style={{ color: '#ffffff' }}
+                className="pointer-events-auto flex items-center justify-between px-8 py-6 rounded-[3rem] border border-transparent transition-all duration-500 w-full max-w-6xl text-text"
             >
-                <div className="flex items-center gap-2 font-bold text-lg tracking-tight font-sans text-white">
-                    <span className="text-xl">⚙️</span>
-                    <span className="tracking-tighter uppercase">United Infratech</span>
+                <div className="flex items-center gap-3 font-bold text-xl tracking-tight font-sans text-accent">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                    <span className="tracking-tighter uppercase mt-1">United Infratech</span>
                 </div>
 
-                <div className="hidden md:flex items-center gap-8 text-sm font-medium font-sans uppercase tracking-widest text-[#E8E4DD]">
-                    <a href="#about" className="hover:-translate-y-[1px] transition-transform">About</a>
-                    <a href="#services" className="hover:-translate-y-[1px] transition-transform">Services</a>
-                    <a href="#quality" className="hover:-translate-y-[1px] transition-transform">Quality</a>
-                    <a href="#customers" className="hover:-translate-y-[1px] transition-transform">Customers</a>
+                <div className="hidden md:flex items-center gap-10 text-sm font-bold font-sans uppercase tracking-[0.15em] text-text/70">
+                    <a href="#about" className="hover:text-accent transition-colors">About</a>
+                    <a href="#services" className="hover:text-accent transition-colors">Services</a>
+                    <a href="#quality" className="hover:text-accent transition-colors">Quality</a>
+                    <a href="#customers" className="hover:text-accent transition-colors">Projects</a>
                 </div>
 
-                <button className="magnetic-btn bg-accent text-white px-6 py-3 rounded-[2rem] font-bold text-sm shadow-md uppercase tracking-widest">
-                    <span className="relative z-10">Get in Touch</span>
+                <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })} className="magnetic-btn bg-accent text-white px-8 py-3.5 rounded-[2.5rem] font-bold text-xs shadow-lg shadow-accent/20 uppercase tracking-widest hover:bg-blue-800 transition-colors">
+                    Contact Us
                 </button>
             </nav>
         </div>
